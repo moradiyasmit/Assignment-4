@@ -1,0 +1,222 @@
+:root {
+  --primary: #4e73df;
+  --danger: #e74a3b;
+  --light: #f8f9fc;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+.btn-username {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+ .btn-username:hover{
+  background: #3756b5;
+  transform: scale(1.05);
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 4rem 5%;
+  gap: 2rem;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 800px;
+  padding: 80px;
+  border-radius: 90px;
+}
+.hero-content h1 span {
+  color: var(--primary);
+}
+.cta-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+.cta-btn:hover {
+  background: #3756b5;
+  transform: scale(1.05);
+}
+
+/* Stats Section (Outside main div - point 3) */
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  background: #3fa1ff;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Main Layout */
+.main-container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+  padding: 3rem 5%;
+  background: var(--light);
+}
+
+/* Service Cards */
+.service-card {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.service-card button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.service-card button:hover {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+/* Table & Cart */
+.cart-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+.rm-btn {
+  background: #fff;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 3px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.rm-btn:hover {
+  background: var(--danger);
+  color: white;
+}
+
+/* Form */
+.form-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+#send-btn {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* footer simple styling */
+.footer-grid {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: #eee;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  .stats-bar {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

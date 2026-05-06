@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Expert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">🧺 LaundryService</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn-username">Username</button>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Revitalize Your Clothes with Expert <span>Laundry Services!</span></h1>
+            <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience.</p>
+            <button class="cta-btn" onclick="document.getElementById('booking-section').scrollIntoView()">Book a service
+                today!</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://img.freepik.com/premium-photo/portrait-laundry-worker-background-clothes-hangers-dry-cleaning_154092-5784.jpg"
+                alt="Laundry image">
+        </div>
+    </header>
+
+    <section class="stats-bar">
+        <div class="stat">
+            <h3>15+</h3>
+            <p>Laundry Services</p>
+        </div>
+        <div class="stat">
+            <h3>240+</h3>
+            <p>Happy Customers</p>
+        </div>
+        <div class="stat">
+            <h3>2+ Yrs</h3>
+            <p>Experience</p>
+        </div>
+    </section>
+
+    <main id="booking-section" class="main-container">
+        <section class="services-list" id="services">
+            <h2>Our Services</h2>
+            <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+            <div id="services-grid"></div>
+            <p class="bottom-info">Add items to the cart and book now</p>
+        </section>
+
+        <section class="checkout-area">
+            <div class="cart-box">
+                <h3>Added Items</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                </table>
+                <div class="total-bar">Total Amount: ₹<span id="total-val">0</span></div>
+            </div>
+
+            <div class="form-box">
+                <h3>Book Now</h3>
+                <form id="laundry-form">
+                    <input type="text" name="from_name" placeholder="Full Name" required>
+                    <div class="input-row">
+                         <!-- Email validation add after rejected  -->
+                        <input type="email" name="reply_to" placeholder="Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required>
+                        <!-- phone number validation add after rejected  -->
+                        <input type="tel" name="from_phone" placeholder="Phone No" pattern="[0-9]{10}" maxlength="10" required>
+                    </div>
+                    <input type="hidden" name="services" id="services-input">
+                    <input type="hidden" name="total" id="total-input">
+                    <button type="submit" id="send-btn">Book now</button>
+                </form>
+                <p id="msg-status"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div>
+               <div class="logo">🧺 LaundryService</div>
+                <h5>About Us</h5>
+                <p>lorem ipsum Dolor Sit Amet</p>
+                <p>Consecteture.Sed At Congue.</p>
+            </div>
+            <div>
+                <h4>Links</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of use</li>
+                    <li>Refund Policy</li>
+
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>moradiyasmit12@gmail.com</p>
+                <p>+91 9123456780</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
